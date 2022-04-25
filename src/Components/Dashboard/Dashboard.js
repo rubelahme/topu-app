@@ -4,13 +4,13 @@ const Dashboard = () => {
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    fetch("https://shrouded-beach-70099.herokuapp.com/emails")
+    fetch("https://mighty-hollows-09871.herokuapp.com/emails")
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [item]);
 
   const handleDelete = (id) => {
-    fetch("https://shrouded-beach-70099.herokuapp.com/delete/" + id, {
+    fetch("https://mighty-hollows-09871.herokuapp.com/delete/" + id, {
       method: "DELETE",
     })
       .then((res) => res.json())
